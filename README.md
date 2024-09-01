@@ -1,5 +1,7 @@
 # ProductStore
 
+This repository is a project that contains materials and examples from [Angular 17](https://www.youtube.com/playlist?list=PLXEUJjGpEX7zwdFSAzIPiSf9p0tOeI1Yu) course by Code Dimension.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.9.
 
 ## Development server
