@@ -5,6 +5,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import { CardComponent } from './components/card/card.component';
 import { Router, RouterLink } from '@angular/router';
+import { Product } from '../../shared/interfaces/products.interface';
 
 
 @Component({
@@ -18,6 +19,7 @@ export class ListComponent {
   products: any[] = []; 
 
   productsService = inject(ProductsService);
+  
   router = inject(Router);
 
   ngOnInit(){
@@ -25,9 +27,9 @@ export class ListComponent {
       this.products = products;
     });
   }
-onEdit(){
+onEdit(product: Product){
   
-  this.router.navigateByUrl('/edit-product')
+  this.router.navigate(['/edit-product',product.id])
 }
 
 }

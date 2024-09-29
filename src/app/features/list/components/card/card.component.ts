@@ -19,6 +19,6 @@ product = input.required<Product>();
 productTitle = computed(()=> this.product().title);
 
 onEdit(){
-  this.edit.emit()
+  this.edit.emit( )
 }
 }

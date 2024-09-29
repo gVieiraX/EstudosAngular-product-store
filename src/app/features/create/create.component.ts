@@ -16,9 +16,7 @@ import { Router } from '@angular/router';
   styleUrl: './create.component.scss'
 })
 export class CreateComponent {
-
   productsService = inject(ProductsService);
-
   matSnackBar = inject(MatSnackBar);
   router = inject(Router);
 
@@ -31,7 +29,8 @@ export class CreateComponent {
   }); 
 
   onSubmit(){
-   this.productsService.post({
+   this.productsService
+   .post({
    title: this.form.controls.title.value
     })
     .subscribe(() =>{
