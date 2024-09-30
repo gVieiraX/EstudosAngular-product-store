@@ -20,7 +20,6 @@ export class EditComponent {
   product:Product = inject(ActivatedRoute).snapshot.data['product'];
 
   onSubmit(product:Product){
-    debugger
     this.productsService
     .put(this.product.id,product)
      .subscribe(() =>{
