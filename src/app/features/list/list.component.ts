@@ -4,7 +4,6 @@ import {MatButtonModule} from "@angular/material/button";
 import { CardComponent } from './components/card/card.component';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Product } from '../../shared/interfaces/products.interface';
-import {MatDialog} from "@angular/material/dialog";
 import { filter } from 'rxjs';
 import { ConfirmationDialogService } from '../../shared/services/confirmation-dialog.service';
 import { NoItemsComponent } from './no-items/no-items.component';
@@ -21,14 +20,12 @@ export class ListComponent {
     inject(ActivatedRoute).snapshot.data['products']
    
   );
-
   
   productsService = inject(ProductsService);
   router = inject(Router);
   confirmationDialogService = inject(ConfirmationDialogService);
 
-  
-  onEdit(product: Product){
+    onEdit(product: Product){
     
     this.router.navigate(['/edit-product',product.id])
   }
