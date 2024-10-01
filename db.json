@@ -1,12 +1,3 @@
 {
-  "products": [
-    {
-      "title": "Camiseta",
-      "id": "2cce"
-    },
-    {
-      "title": "Sapato1",
-      "id": "ed99"
-    }
-  ]
+  "products": []
 }
